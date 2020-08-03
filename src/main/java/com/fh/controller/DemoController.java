@@ -18,6 +18,11 @@ public class DemoController {
     @Autowired
     private DemoService demoService;
 
+    @RequestMapping("test")
+    public String test(){
+        return "hello";
+    }
+
     @RequestMapping("queryList")
     public List<BuyCar> queryList(){
         List<BuyCar> buyCarList = demoService.queryList();
